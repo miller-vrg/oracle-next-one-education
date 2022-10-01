@@ -1,0 +1,36 @@
+.headerPrincipal .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerPrincipal-nav{
+    display: flex;
+}
+.flex{
+    display: flex;
+}
+.contenidoPrincipal-cursos{
+    flex-wrap:wrap;
+}
+.contenidoPrincipal-cursos-link{
+    font-size: .8rem;
+    width: 20%;
+}
+.rodapePrincipal-navMap-list{
+    height: 255px;
+}
+.rodapePrincipal-patrocinadores .container{
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm{
+    width: 25%;
+}

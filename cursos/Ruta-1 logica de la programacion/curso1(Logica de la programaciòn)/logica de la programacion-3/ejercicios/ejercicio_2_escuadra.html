@@ -1,0 +1,46 @@
+
+<style>
+
+	div{
+		margin: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	canvas{
+		margin: 0;
+		border-radius: 12px;
+		box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+	}
+</style>
+
+<div>
+<canvas width="600" height="400">
+</canvas>
+</div>
+
+<script>
+
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+	
+	pincel.beginPath();
+	pincel.moveTo(50, 50);
+	pincel.lineTo(50, 400);
+	pincel.lineTo(400, 400);
+	pincel.fill();
+
+	pincel.fillStyle = "white";
+	pincel.beginPath();
+	pincel.moveTo(100,175);
+	pincel.lineTo(100,350);
+	pincel.lineTo(275,350);
+	pincel.fill();
+
+
+
+
+</script>

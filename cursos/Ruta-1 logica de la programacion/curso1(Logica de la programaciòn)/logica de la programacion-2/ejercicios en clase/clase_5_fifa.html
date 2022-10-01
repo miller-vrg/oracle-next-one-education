@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<style>
+    h3{
+        text-align: center;
+        background: rgb(199, 175, 245);
+    }
+</style>
+<h3>Progarama de la fifa</h3>
+
+<script>
+
+    function write(value){
+        document.write(value);
+        skip();
+    }
+
+    function skip(){
+        document.write("<br>");
+    }
+
+    let 
+    yearInicio = parseInt(prompt("Ingrese el año inicio para calcular:")),
+    yearFinal = parseInt(prompt("Ingrese el año final para calcular:")),
+    i = 0;
+
+    while(yearInicio <= yearFinal){
+       
+        write(`Hubo mundial de la fifa en el año ${yearInicio}`);
+        yearInicio += 4;
+        i++;
+    }
+    write(`<hr>Hubieron ${i} mundiales hasta la fecha`);
+</script>

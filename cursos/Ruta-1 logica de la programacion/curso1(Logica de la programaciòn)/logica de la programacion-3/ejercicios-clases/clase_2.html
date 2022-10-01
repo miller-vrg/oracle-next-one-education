@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<style>
+
+	div{
+		margin: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	canvas{
+		margin: 0;
+		border-radius: 12px;
+		box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+	}
+</style>
+
+<div>
+<canvas width="600" height="400">
+</canvas>
+</div>
+
+<script>
+	function divujar(x,y,color){ 
+		var canvas = document.querySelector("canvas"),
+		pincel = canvas.getContext("2d");
+		pincel.fillStyle = color;
+		pincel.fillRect(x,y,50,50);
+		pincel.strokeStyle = "black";
+		pincel.strokeRect(x,y,50,50);
+
+	}
+
+	for(x = 0; x < 600; x += 50 ){
+		divujar(x,0,"yellow");
+		divujar(x,50,"blue");
+		divujar(x,100,"red");
+	}
+</script>

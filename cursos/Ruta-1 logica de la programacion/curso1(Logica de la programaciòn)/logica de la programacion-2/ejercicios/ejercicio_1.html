@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function write(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var 
+    edad = parseInt(prompt("¿Cuál es tu edad?")),
+    tieneLicencia = prompt("¿Tienes licencia? Responde S o N"),
+    mensaje = "Puedes conducir tienes licencia";
+
+    mensaje = ( edad < 18)?"No puedes conducir eres menor de edad": mensaje;
+    mensaje = ( edad > 18 && tieneLicencia == "N")?"No puedes conducir no tienes licencia": mensaje;
+
+    write(mensaje);
+</script>

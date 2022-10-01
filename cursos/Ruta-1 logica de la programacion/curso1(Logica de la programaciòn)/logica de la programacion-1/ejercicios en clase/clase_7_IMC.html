@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<h3>Programa</h3>
+
+<script>
+ function salto(){
+	document.write("<br><br><br>");
+ }
+ 
+ function write(value){
+ 	document.write(`<big> ${value} </big>`);
+	salto();
+ }
+ 
+ function calcularImc(peso,altura,name){
+	let resultado = peso / (altura * altura);
+	write(`El indice de masa corporal de ${name} es: ${resultado}`);
+ }
+ 
+ write("Calculadora de peso corporal IMC");
+ calcularImc(66,1.66,"Miller");
+ calcularImc(20,1.10,"Maria");
+ calcularImc(80,1.90,"Julia");
+ 
+ 
+</script>

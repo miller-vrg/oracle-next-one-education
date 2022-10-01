@@ -1,0 +1,49 @@
+.titulo-principal{
+    padding-left: 30px;
+}
+
+#banner{
+    margin:0;
+    width:100%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.principal{
+    background:#ccc;
+    padding: 20px;
+}
+
+.titulo-centralizado,p{
+    text-align: center;
+}
+
+#p2{
+    font-size: 20px;
+}
+
+em strong{
+    color:red;
+}
+
+#diferencias{
+    background: #fff;
+    padding: 30px;
+}
+
+ul{
+    display:inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.items{
+    font-style:italic;
+}
+
+#diferencias img{
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #000;
+}

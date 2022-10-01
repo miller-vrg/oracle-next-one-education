@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<style>
+    h3{
+        text-align: center;
+        background: rgb(199, 175, 245);
+    }
+</style>
+
+<h3>Estrellas</h3>
+<script>
+    function write(value){
+        document.write(value);
+    }
+
+    function skip(){
+        document.write("<br>");
+    }
+
+    for (let lineas = 1; lineas <= 3; lineas++){
+        for(let column = 1; column <= 10; column++){
+            write("*");
+        }
+        skip();
+    }
+ 
+</script>

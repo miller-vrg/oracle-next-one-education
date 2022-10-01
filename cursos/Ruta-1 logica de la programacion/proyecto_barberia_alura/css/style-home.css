@@ -1,0 +1,177 @@
+.body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+header{
+    background:#bbb;
+    padding: 20px 0;
+}
+
+#cabecera{
+    width:940px;
+    position: relative;
+    margin:0 auto;
+}
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color:#000;
+    font-weight: 700;
+    font-size:22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(248, 158, 55);
+    text-decoration: underline;
+}
+
+main{
+
+}
+
+/*CSS para muestra */
+
+.banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal{
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+.principal em{
+    font-style: italic;
+}
+
+.utencilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe,#888);
+}
+
+.mapa p{
+    margin:0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888;
+}
+
+.contenido-diferencial{
+    width:640px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.lista-diferenciales{
+    width: 40%;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.items:first-child{
+    font-weight: bold;
+}
+
+.imagen-diferencial{
+    width:60%;
+    border-radius: 0 20% 0 20% ;
+    box-shadow: 1px 1px 20px 3px rgb(0,0,0);
+    transition: 1s;
+}
+
+.imagen-diferencial:hover{
+    border: 1px solid white;
+    border-radius: 20% 0 20% 0;
+    box-shadow: inset 1px 1px 20px 3px rgb(255,255,255);
+    opacity: 0.9;
+    transform: scale(1.05);
+
+}
+
+.items:before{
+    content: "★";
+}
+
+.contenido-visula{
+    text-align: center;
+    margin: 3em auto;
+}
+
+footer{
+    text-align: center;
+    background: url(../img/bg.jpg);
+    padding: 40px;
+}
+
+#copyrigth{
+    color:#fff;
+    font-size: 13px;
+}
+
+@media screen and (max-width:480px){
+
+  h1{
+    text-align: center;
+  }  
+  nav{
+    position: static;
+  }
+
+  .contenido-diferencial{
+    display: grid;
+    place-items: center;
+  }
+
+  .lista-diferenciales, .imagen-diferencial{
+    width: 80%;
+  }
+
+ .principal, #cabecera, .mapa-contenido, .contenido-diferencial,.contenido-visula{
+    width: auto;
+ }
+
+}

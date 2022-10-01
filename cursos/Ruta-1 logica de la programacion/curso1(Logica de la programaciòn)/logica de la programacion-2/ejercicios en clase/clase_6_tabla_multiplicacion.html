@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<style>
+    h3{
+        text-align: center;
+        background: rgb(199, 175, 245);
+    }
+</style>
+
+<h3>Tabla de multiplicar</h3>
+<script>
+    function write(value){
+        document.write(value);
+        skip();
+    }
+
+    function skip(){
+        document.write("<br>");
+    }
+
+    var tabla = parseInt(prompt("Que tabla quiere ver:")),
+    i = 1;
+
+    write(`<center>Tabla del ${tabla} </center> <hr>`);
+    write(`<center>Ciclo while</center>`);
+    while(i <= 10){
+
+        write(`${tabla} x ${i} = ${tabla*i}`);
+        i++;
+    }
+
+    write("<br><hr><center>Ciclo for</center>");
+    for(i = 1; i <= 10; i++){
+        write(`${tabla} x ${i} = ${tabla*i}`);
+    }
+</script>

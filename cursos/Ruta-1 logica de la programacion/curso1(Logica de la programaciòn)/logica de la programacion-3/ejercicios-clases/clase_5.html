@@ -1,0 +1,95 @@
+<meta charset="UTF-8">
+
+<style>
+
+	div{
+		margin: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	canvas{
+		margin: 0;
+		width: 600px;
+		height: 400px;
+		border-radius: 12px;
+		box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+	}
+</style>
+
+<div>
+	<canvas width="600" height="400">
+		
+	</canvas>
+</div>
+
+<script>
+	const canvas = document.querySelector("canvas"),
+	pincel = canvas.getContext("2d"), radio = 10;
+
+	var xAzar, yAzar;
+	pincel.fillStyle = "white";
+	pincel.fillRect(0,0,600,400);
+
+	function dibujarCirculo(x,y,radio,color){
+		pincel.fillStyle = color;
+		pincel.beginPath();
+		pincel.arc(x,y,radio,0,2*Math.PI);
+		pincel.fill();
+	}
+
+	function limpiarPantalla(){
+		pincel.clearRect(0,0,600,400);
+	}
+
+
+	function sortearPosicion(maximo){
+		return Math.floor(Math.random()*maximo);
+	}
+
+	function limpiarPantalla(){
+		pincel.clearRect(0,0,600,400);
+	}
+
+	function diseharObjevito(){
+
+		 xAzar = sortearPosicion(600);
+		 yAzar = sortearPosicion(400);
+		 xAzar2 = sortearPosicion(600);
+		 yAzar2 = sortearPosicion(400);
+
+		limpiarPantalla();
+		dibujarCirculo(xAzar,yAzar,radio + 20,"red");
+		dibujarCirculo(xAzar,yAzar,radio + 10,"white");
+		dibujarCirculo(xAzar,yAzar,radio,"red");
+
+		dibujarCirculo(xAzar2,yAzar2,radio + 20,"blue");
+		dibujarCirculo(xAzar2,yAzar2,radio + 10,"white");
+		dibujarCirculo(xAzar2,yAzar2,radio,"blue");
+
+	}
+
+	function disparar(evento){
+		var x = evento.pageX - canvas.offsetLeft,
+		y = evento.pageY - canvas.offsetTop;
+		
+		console.log(x + "," + y);
+		var mensaje = ( (x < xAzar + radio) &&
+					    (x > xAzar - radio) &&
+					    (y < yAzar + radio) &&
+					    (y > yAzar - radio))?"Tiro certero":"Tiro errado";
+
+
+		alert(mensaje);
+	}
+
+		//diseharObjevito(xAzar,yAzar);
+	setInterval(diseharObjevito,1000);
+	canvas.onclick = disparar;
+
+	//
+	//dibujarCirculo(20,20,10)
+</script>

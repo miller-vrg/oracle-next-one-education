@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<style>
+    h3{
+        text-align: center;
+        background: rgb(199, 175, 245);
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 5px black;
+    }
+</style>
+
+<center>
+<h3>Promedio de edades</h3>
+</center>
+<script>
+    function write(value){
+        document.write(value);
+        skip();
+    }
+
+    function skip(){
+        document.write("<br>");
+    }
+
+    var
+    totalFamilia = parseInt(prompt("Dijite la cantidad familiar:")),
+    promedio = 0, i = 1;
+
+    while( i <= totalFamilia){
+        promedio += parseInt(prompt("Dijite la edad del familiar:"));
+        i++;
+    }  
+    write(`El promedio de edades es ${promedio/4}`);
+
+</script>

@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h2>Login</h2>
+
+<label for="">User:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="user" placeholder="Your user"><br>
+<label for="">Password:</label>
+<input type="password" id="password" placeholder="*****"><br>
+<button onclick="verificar()">Login</button>
+
+
+<script>
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321",i = 1;
+
+    function verificar(){
+
+        inicioDeSesionIngresado = document.getElementById("user").value,
+        contrasenhaIngresada = document.getElementById("password").value;
+        
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado &&
+            contrasenhaRegistrada == contrasenhaIngresada ) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            i=1;
+            return;
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+        i++;
+    }
+</script>

@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h3>Programa</h3>
+
+<script>
+ function salto(){
+	document.write("<br><br><br>");
+ }
+ 
+ function write(value){
+ 	document.write(`<big> ${value} </big>`);
+	salto();
+ }
+ 
+ function calcularImc(peso,altura,name){
+	let resultado = peso / (altura * altura);
+	
+	var mensaje = "Intervalo normal";
+	
+	mensaje = ( resultado < 18.5 )? "insuficiencia ponderal": mensaje;
+	mensaje = ( resultado >= 25.0 && resultado < 30.0)? "sobre peso": mensaje;
+	mensaje = ( resultado >= 25.0 && resultado <= 29.9)? "preobesidad": mensaje;
+	mensaje = ( resultado >= 30.0 )? "obesidad": mensaje;
+	
+	write(`El indice de masa corporal de ${name} es: ${resultado} ${mensaje}`);
+ }
+ 
+ 
+ write("Calculadora de peso corporal IMC");
+ 
+name = prompt("Dijite su nombre");
+ peso = prompt(name + " dijite su peso");
+ altura = prompt(name + "dijite su altura");
+ calcularImc(peso,altura,name);
+ 
+ 
+</script>

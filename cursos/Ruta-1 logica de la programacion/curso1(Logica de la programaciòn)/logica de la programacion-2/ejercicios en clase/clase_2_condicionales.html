@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h3>Programa - calcular puntos de un equipo de futboll</h3>
+
+<script>
+ function salto(){
+	document.write("<br><br><br>");
+ }
+ 
+ function write(value){
+ 	document.write(`<big> ${value} </big>`);
+	salto();
+ }
+ 
+ var 
+ victorias = parseInt(prompt("Cantiadad de veces ganadas")),
+ empates =  parseInt(prompt("Cantiadad de veces empatadas")),
+ puntosActual = victorias * 3 + empates;
+ 
+ write(`Total de punto de equipo ${puntosActual}`);
+ 
+ if( puntosActual > 28 ){
+	write("Mejor que el año pasado");
+ }else if( puntosActual == 28 ){
+ 	write("Puntos igual");
+ }else{
+ write("Peor que el año pasado");
+ }
+ 
+</script>

@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+ function salto(){
+	document.write("<br><br><br>");
+ }
+ 
+ function write(value){
+ 	document.write(`<big> ${value} </big>`);
+	salto();
+ }
+ 
+ var
+ numeroPensado = Math.round(Math.random()*10),
+ numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 a 10"))
+ mensaje = "Usted acerto";
+ 
+ mensaje = ( numeroPensado != numeroLanzado )?"Usted no ha acerto el numero era " + numeroPensado: mensaje;
+ 
+ write(mensaje);
+ 
+</script>

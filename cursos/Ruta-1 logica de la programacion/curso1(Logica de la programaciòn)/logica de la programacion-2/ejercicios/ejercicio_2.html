@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<style>
+    h3{
+        text-align: center;
+        background: rgb(199, 175, 245);
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 5px black;
+    }
+</style>
+
+<center>
+<h3>Numeros pares 1 - 100</h3>
+</center>
+
+<script>
+    function write(value){
+        document.write(value);
+        skip();
+    }
+
+    function skip(){
+        document.write("<br>");
+    }
+
+    var i = 1;
+
+    while(i <= 100){
+
+        if(i%2 == 0){
+            write(i);
+        }
+        i++;
+    }
+    write("<hr>fin");
+</script>
