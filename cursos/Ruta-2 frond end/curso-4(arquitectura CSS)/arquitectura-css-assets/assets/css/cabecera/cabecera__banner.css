@@ -1,0 +1,28 @@
+.cabecera__banner{
+    position: relative;
+}
+.banner__img{
+    width: 100%;
+    height: calc((100vh) - 72px);
+}
+.banner__title{
+    font-family: 'Pacifico', cursive;
+    color:#fdfdfd;
+    font-size: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    text-shadow: 0 4px4px rgba(0,0,0,.75);
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width:600px){
+    .banner__img{
+        height:calc((50vh) - 72px);
+    }
+    .banner__title{
+        font-size: 2rem;
+    }
+}
